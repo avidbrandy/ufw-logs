@@ -94,6 +94,8 @@ def parse_logs(filepath):
 
             logs.append(log)
             srcs.append(src)
+            print(src.address)
+
         except:
             print(f'Error with {filepath}')
             print(f'{line[0]}')
@@ -103,8 +105,6 @@ def parse_logs(filepath):
             srcs = []
             Log.objects.bulk_create(logs, ignore_conflicts=True)
             logs = []
-
-        print(src.address)
 
 
     IP.objects.bulk_create(srcs, ignore_conflicts=True)
