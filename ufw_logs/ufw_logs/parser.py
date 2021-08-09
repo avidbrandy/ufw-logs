@@ -1,4 +1,4 @@
-from shield.models import Host, IP, Log, Login, Port
+from ufw_logs.models import Host, IP, Log, Login, Port
 
 from django.utils import timezone
 
