@@ -106,7 +106,6 @@ def parse_logs(filepath):
             Log.objects.bulk_create(logs, ignore_conflicts=True)
             logs = []
 
-
     IP.objects.bulk_create(srcs, ignore_conflicts=True)
     Log.objects.bulk_create(logs, ignore_conflicts=True)
     return
